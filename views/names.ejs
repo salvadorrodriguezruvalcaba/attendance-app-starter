@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students Attendance Register</title>
+
+  <link rel="stylesheet" type="text/css" href="/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+<body>
+
+  <section class="container col-lg-12 col-md-12">
+    <h1>Students Attendance Course</h1>
+    <h2><%= courses.courseName %></h2>
+    <h3>Please check-in using the form below.</h3>
+    <br>
+
+    <div class="col-lg-6 col-md-6 col-sm-3 col-xs-3">
+      <form method="POST" action="/names">
+        Register your First name: <input type="text" name="name">
+        <input type="submit" value="Submit">
+      </form>
+      <br>
+      <p><%= courses.description %></p>
+    </div>
+
+    <div class="col-lg-6 col-md-6 col-sm-9 col-xs-9">
+
+        <div class="box_left col-lg-3 col-md-3 col-sm-3 col-xs-3">
+           <tr>
+            <th style="text-align:center;  font-size:13px;">Student</th><br>
+            <% courses.students.forEach(function(student) { %>
+                <td class="tdName"><%= student.name %></td>
+                <br>
+            <% }) %>
+          </tr>
+        </div>
+
+        <div class="box_right col-lg-3 col-md-3  col-sm-3 col-xs-3">
+          <tr>
+            <th>Grade</th><br>
+            <% courses.students.forEach(function(student) { %>
+              <td class="tdAttendent"><%= student.score %></td>
+              <br>
+            <% }) %>
+          </tr>
+        </div>
+
+        <div class="box_right col-lg-3 col-md-3  col-sm-3 col-xs-3">
+          <tr>
+            <th>Attendance</th><br>
+            <% courses.students.forEach(function(student) { %>
+              <td class="tdAttendent"><%= student.attendance %></td>
+              <br>
+            <% }) %>
+          </tr>
+        </div>
+
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+</body>
+</html>

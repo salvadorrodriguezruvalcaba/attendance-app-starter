@@ -1,0 +1,33 @@
+h1, h2, h3{
+  text-align: center;
+}
+h3{
+  color: red;
+}
+
+.box_left {
+  width: 40%;
+  background-color: #EEEEEE;
+  outline: 1px black solid;
+  /*margin: 20px;*/
+}
+
+.box_right {
+  width: 25%;
+  background-color: #EEEEEE;
+  text-align: center;
+  outline: 1px black solid;
+  /*margin: 20px;*/
+}
+
+.tdName {
+  text-align: left;
+  /*padding: 50px;*/
+}
+
+.tdAttendent {
+  text-align: center;
+
+  /*padding: 50px;*/
+  color: Blue;
+}
